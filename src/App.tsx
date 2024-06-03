@@ -4,7 +4,6 @@ import { loadSlim } from 'tsparticles-slim';
 import Particles from 'react-particles';
 import './App.css';
 import parse from 'html-react-parser';
-import { Container } from 'tsparticles-engine/types/export-types';
 
 export interface UserInfo {
 	firstName?: string;
@@ -123,12 +122,12 @@ For multiple iterations, simply state in the last step to repeat the previous st
 				)
 			);
 			setDisplayFormatText(
-				displayFormatTextTemplate.replace(
+				(displayFormatText = displayFormatTextTemplate.replace(
 					'EMAIL',
 					'&lt;' + `${formData!.email}` + '>'
-				)
+				))
 			);
-			setText(textTemplate);
+			setText((text = textTemplate));
 		}
 	};
 	const handleDownloadClick = async () => {
@@ -147,7 +146,7 @@ For multiple iterations, simply state in the last step to repeat the previous st
 
 	useEffect(() => {
 		setText(text);
-	}, []);
+	}, [text]);
 	return (
 		<>
 			<Particles

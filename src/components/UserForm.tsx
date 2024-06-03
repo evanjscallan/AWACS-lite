@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { UserInfo } from '../App';
+
 import './../App.css';
 
 interface UserFormProps {
