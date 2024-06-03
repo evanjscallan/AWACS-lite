@@ -157,7 +157,7 @@ For multiple iterations, simply state in the last step to repeat the previous st
 				options={{
 					background: {
 						color: {
-							value: '#0d0d0d',
+							value: 'rgb(25, 28, 29)',
 						},
 					},
 					fpsLimit: 120,
